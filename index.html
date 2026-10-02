@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web Estructurado</title>
+    <!-- Vinculación de CSS con ruta relativa -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Proyecto Integrador Web</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Publicación y Despliegue</h2>
+            <p>Este sitio está optimizado para su transferencia vía FTP o GitHub Pages.</p>
+            <!-- Vinculación de Imagen con ruta relativa -->
+            <img src="img/proyecto.jpg" alt="Captura del proyecto de desarrollo">
+        </section>
+
+        <!-- AGREGADO: Tabla comparativa de hosting adaptada a tu estructura -->
+        <section class="contenedor">
+            <h2>Comparativa: Hosting Gratuito vs Pago</h2>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Criterio</th>
+                            <th>Hosting Gratuito <span class="subtext">(ej. GitHub Pages)</span></th>
+                            <th>Hosting de Pago <span class="subtext">(Shared / VPS)</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Criterio" class="criterio">Costo</td>
+                            <td data-label="Hosting Gratuito" class="gratis">$0 USD</td>
+                            <td data-label="Hosting de Pago" class="pago">Mensual / Anual ($3 - $15 USD/mes)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Criterio" class="criterio">Dominio</td>
+                            <td data-label="Hosting Gratuito">Subdominio (usuario.github.io)</td>
+                            <td data-label="Hosting de Pago">Dominio propio (midominio.com)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Criterio" class="criterio">Base de Datos</td>
+                            <td data-label="Hosting Gratuito">No soportado (Solo sitios estáticos)</td>
+                            <td data-label="Hosting de Pago">Soportado (MySQL, PostgreSQL, PHP)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Criterio" class="criterio">Seguridad / Transferencia</td>
+                            <td data-label="Hosting Gratuito">Automática vía Git / HTTPS</td>
+                            <td data-label="Hosting de Pago">Conexión manual por FTP / SFTP / SSH</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Criterio" class="criterio">Uso Recomendado</td>
+                            <td data-label="Hosting Gratuito" class="uso-gratis">Portafolios, tareas y pruebas</td>
+                            <td data-label="Hosting de Pago" class="uso-pago">Sitios de clientes, tiendas online</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <!-- Vinculación de JavaScript con ruta relativa (Cambiado a app.js según tu estructura) -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
