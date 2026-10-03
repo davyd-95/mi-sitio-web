@@ -49,17 +49,6 @@ button.active {
 	padding-top: 1rem;
 }
 
-.evolution-sequence {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
-}
-
-.evolution-card {
-	flex: 1 1 180px;
-	text-align: center;
-}
-
 .pokemon-img {
 	display: block;
 	height: auto;
@@ -72,10 +61,6 @@ button.active {
 	margin: 0 auto;
 }
 
-.pokemon-main-image {
-	max-width: 420px;
-}
-
 .pokemon-main-img {
 	width: 100%;
 }
@@ -83,9 +68,6 @@ button.active {
 /* Página de inicio: atmósfera nocturna y composición principal. */
 #inicio {
 	--home-black: #090811;
-	--home-ink: #131126;
-	--home-purple: #3d2467;
-	--home-violet: #7954c7;
 	--home-magenta: #d34cb5;
 	--home-text-soft: #bcb5d2;
 	border: 0;
@@ -377,9 +359,6 @@ button.active {
 /* Sección de Gastly: gas oscuro, niebla y energía violeta. */
 #gastly {
 	--gastly-black: #08080d;
-	--gastly-ink: #11101a;
-	--gastly-panel: #171521;
-	--gastly-violet: #8d67d7;
 	--gastly-purple: #5b3a91;
 	--gastly-glow: #b178ec;
 	--gastly-muted: #aaa5b8;
@@ -769,8 +748,6 @@ button.active {
 /* Sección de Haunter: energía más agresiva, azul profunda y violeta eléctrico. */
 #haunter {
 	--haunter-black: #070711;
-	--haunter-ink: #11112a;
-	--haunter-panel: #191938;
 	--haunter-blue: #202c70;
 	--haunter-purple: #6735a7;
 	--haunter-violet: #a873ff;
@@ -1162,18 +1139,6 @@ button.active {
 	padding-left: 1rem;
 }
 
-@keyframes haunter-float {
-	0%,
-	100% {
-		transform: translate3d(0, 0, 0);
-		opacity: 0.45;
-	}
-	50% {
-		transform: translate3d(8px, -14px, 0);
-		opacity: 1;
-	}
-}
-
 @keyframes haunter-drift {
 	0% {
 		transform: translate3d(-8px, 4px, 0) scale(0.94);
@@ -1210,8 +1175,6 @@ button.active {
 /* Sección de Gengar: presencia final, púrpura profundo y brillo magenta. */
 #gengar {
 	--gengar-black: #08050e;
-	--gengar-ink: #160b25;
-	--gengar-panel: #21102f;
 	--gengar-purple: #572080;
 	--gengar-magenta: #bd3eaf;
 	--gengar-pink: #f18be7;

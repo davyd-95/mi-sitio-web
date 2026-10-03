@@ -2,7 +2,6 @@
 const navigationButtons = document.querySelectorAll("[data-section]");
 const contentSections = document.querySelectorAll(".content-section");
 const sectionTransitionDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 360;
-let activeSection = document.querySelector(".content-section:not([hidden])");
 let transitionId = 0;
 
 // Actualiza la pestaña activa y deja visible únicamente su sección.
@@ -13,7 +12,6 @@ function showSection(sectionId) {
 		return;
 	}
 
-	const previousSection = activeSection;
 	const currentTransitionId = ++transitionId;
 
 	navigationButtons.forEach((button) => {
@@ -33,7 +31,6 @@ function showSection(sectionId) {
 	nextSection.hidden = false;
 	nextSection.classList.remove("section-exit");
 	nextSection.classList.add("section-active");
-	activeSection = nextSection;
 
 	window.setTimeout(() => {
 		if (currentTransitionId !== transitionId) {
