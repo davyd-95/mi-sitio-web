@@ -1,0 +1,27 @@
+/* Estilos base para comprobar la estructura de la página. */
+body {
+	font-family: sans-serif;
+	margin: 0;
+}
+
+header,
+main {
+	margin: 0 auto;
+	max-width: 900px;
+	padding: 1rem;
+}
+
+nav {
+	display: flex;
+	gap: 0.5rem;
+}
+
+button {
+	cursor: pointer;
+}
+
+.content-section {
+	border-top: 1px solid #ccc;
+	margin-top: 1rem;
+	padding-top: 1rem;
+}

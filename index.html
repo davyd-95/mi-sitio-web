@@ -1,76 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web Estructurado</title>
-    <!-- Vinculación de CSS con ruta relativa -->
-    <link rel="stylesheet" href="css/estilos.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Línea evolutiva de Gastly, Haunter y Gengar.">
+	<title>Línea evolutiva de Gastly</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header>
-        <h1>Proyecto Integrador Web</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Publicación y Despliegue</h2>
-            <p>Este sitio está optimizado para su transferencia vía FTP o GitHub Pages.</p>
-            <!-- Vinculación de Imagen con ruta relativa -->
-            <img src="img/proyecto.jpg" alt="Captura del proyecto de desarrollo">
-        </section>
+	<header>
+		<h1>Línea evolutiva de Gastly</h1>
 
-        <!-- AGREGADO: Tabla comparativa de hosting adaptada a tu estructura -->
-        <section class="contenedor">
-            <h2>Comparativa: Hosting Gratuito vs Pago</h2>
-            <div class="tabla-contenedor">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Criterio</th>
-                            <th>Hosting Gratuito <span class="subtext">(ej. GitHub Pages)</span></th>
-                            <th>Hosting de Pago <span class="subtext">(Shared / VPS)</span></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="Criterio" class="criterio">Costo</td>
-                            <td data-label="Hosting Gratuito" class="gratis">$0 USD</td>
-                            <td data-label="Hosting de Pago" class="pago">Mensual / Anual ($3 - $15 USD/mes)</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Criterio" class="criterio">Dominio</td>
-                            <td data-label="Hosting Gratuito">Subdominio (usuario.github.io)</td>
-                            <td data-label="Hosting de Pago">Dominio propio (midominio.com)</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Criterio" class="criterio">Base de Datos</td>
-                            <td data-label="Hosting Gratuito">No soportado (Solo sitios estáticos)</td>
-                            <td data-label="Hosting de Pago">Soportado (MySQL, PostgreSQL, PHP)</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Criterio" class="criterio">Seguridad / Transferencia</td>
-                            <td data-label="Hosting Gratuito">Automática vía Git / HTTPS</td>
-                            <td data-label="Hosting de Pago">Conexión manual por FTP / SFTP / SSH</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Criterio" class="criterio">Uso Recomendado</td>
-                            <td data-label="Hosting Gratuito" class="uso-gratis">Portafolios, tareas y pruebas</td>
-                            <td data-label="Hosting de Pago" class="uso-pago">Sitios de clientes, tiendas online</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
-    <!-- Vinculación de JavaScript con ruta relativa (Cambiado a app.js según tu estructura) -->
-    <script src="js/app.js"></script>
+		<!-- Menú principal para cambiar entre las secciones. -->
+		<nav aria-label="Navegación principal">
+			<button type="button" data-section="inicio">Inicio</button>
+			<button type="button" data-section="gastly">Gastly</button>
+			<button type="button" data-section="haunter">Haunter</button>
+			<button type="button" data-section="gengar">Gengar</button>
+		</nav>
+	</header>
+
+	<main>
+		<!-- Cada sección representa una etapa de la página. -->
+		<section id="inicio" class="content-section" aria-labelledby="titulo-inicio">
+			<h2 id="titulo-inicio">Inicio</h2>
+			<p>Contenido de ejemplo para presentar la línea evolutiva de Gastly.</p>
+		</section>
+
+		<section id="gastly" class="content-section" aria-labelledby="titulo-gastly" hidden>
+			<h2 id="titulo-gastly">Gastly</h2>
+			<p>Contenido de ejemplo sobre Gastly, la primera etapa de la línea evolutiva.</p>
+		</section>
+
+		<section id="haunter" class="content-section" aria-labelledby="titulo-haunter" hidden>
+			<h2 id="titulo-haunter">Haunter</h2>
+			<p>Contenido de ejemplo sobre Haunter, la segunda etapa de la línea evolutiva.</p>
+		</section>
+
+		<section id="gengar" class="content-section" aria-labelledby="titulo-gengar" hidden>
+			<h2 id="titulo-gengar">Gengar</h2>
+			<p>Contenido de ejemplo sobre Gengar, la etapa final de la línea evolutiva.</p>
+		</section>
+	</main>
+
+	<script src="js/script.js"></script>
 </body>
-
 </html>
