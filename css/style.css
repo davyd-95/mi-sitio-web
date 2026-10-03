@@ -1672,3 +1672,339 @@ button.active {
 		text-align: left;
 	}
 }
+
+/* Movimiento compartido y estados de transición de las pestañas. */
+.content-section {
+	will-change: opacity, transform;
+}
+
+.content-section.section-active {
+	animation: section-fade-in 420ms ease-out both;
+}
+
+.content-section.section-exit {
+	animation: section-fade-out 320ms ease-in both;
+	pointer-events: none;
+}
+
+button {
+	transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease, background-color 300ms ease;
+}
+
+button:hover,
+button:focus-visible {
+	transform: translateY(-2px);
+	box-shadow: 0 0 16px rgba(211, 76, 181, 0.25);
+	outline: none;
+}
+
+button[data-section="inicio"].active,
+button[data-section="inicio"]:hover {
+	box-shadow: 0 0 18px rgba(121, 84, 199, 0.38);
+}
+
+button[data-section="gastly"].active,
+button[data-section="gastly"]:hover {
+	border-color: #b178ec;
+	box-shadow: 0 0 18px rgba(177, 120, 236, 0.42);
+}
+
+button[data-section="haunter"].active,
+button[data-section="haunter"]:hover {
+	border-color: #a873ff;
+	box-shadow: 0 0 18px rgba(168, 115, 255, 0.45);
+}
+
+button[data-section="gengar"].active,
+button[data-section="gengar"]:hover {
+	border-color: #f18be7;
+	box-shadow: 0 0 20px rgba(241, 139, 231, 0.48);
+}
+
+/* Inicio: progresión suave y tres ritmos de flotación. */
+.hero-visual .pokemon-main-img {
+	animation: home-gengar-float 6.5s ease-in-out infinite;
+}
+
+#inicio .evolution-card {
+	transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease;
+}
+
+#inicio .evolution-card:hover {
+	transform: translateY(-6px) scale(1.025);
+}
+
+#inicio .evolution-card:nth-of-type(1) {
+	border-color: rgba(177, 120, 236, 0.4);
+}
+
+#inicio .evolution-card:nth-of-type(1):hover {
+	box-shadow: 0 18px 38px rgba(177, 120, 236, 0.22);
+}
+
+#inicio .evolution-card:nth-of-type(2) {
+	border-color: rgba(168, 115, 255, 0.4);
+}
+
+#inicio .evolution-card:nth-of-type(2):hover {
+	box-shadow: 0 18px 38px rgba(168, 115, 255, 0.24);
+}
+
+#inicio .evolution-card:nth-of-type(3) {
+	border-color: rgba(241, 139, 231, 0.4);
+}
+
+#inicio .evolution-card:nth-of-type(3):hover {
+	box-shadow: 0 18px 38px rgba(241, 139, 231, 0.25);
+}
+
+#inicio .evolution-card:nth-of-type(1) .pokemon-card-img {
+	animation: gastly-float 6.2s ease-in-out infinite;
+}
+
+#inicio .evolution-card:nth-of-type(2) .pokemon-card-img {
+	animation: haunter-float 5.3s ease-in-out infinite;
+}
+
+#inicio .evolution-card:nth-of-type(3) .pokemon-card-img {
+	animation: gengar-float 5.8s ease-in-out infinite;
+}
+
+#inicio .evolution-arrow {
+	animation: evolution-arrow 3.2s ease-in-out infinite;
+}
+
+/* Gastly: respiración de gas y niebla sutil. */
+.gastly-main-img {
+	animation: gastly-float 5.8s ease-in-out infinite;
+}
+
+.gastly-smoke,
+.gastly-haze {
+	animation: gastly-mist 7s ease-in-out infinite alternate;
+}
+
+.gastly-smoke-two {
+	animation-delay: -2.4s;
+}
+
+.gastly-smoke-three {
+	animation-delay: -4.5s;
+}
+
+.gastly-panel,
+.gastly-evolution-card {
+	transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease;
+}
+
+.gastly-panel:hover,
+.gastly-evolution-card:hover {
+	transform: translateY(-4px);
+	border-color: rgba(177, 120, 236, 0.46);
+	box-shadow: 0 20px 42px rgba(108, 85, 139, 0.22);
+}
+
+/* Haunter: desplazamiento irregular y energía espectral. */
+.haunter-main-img {
+	animation: haunter-float 4.8s ease-in-out infinite;
+}
+
+.haunter-panel,
+.haunter-evolution-card {
+	transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease;
+}
+
+.haunter-panel:hover,
+.haunter-evolution-card:hover {
+	transform: translateY(-5px) rotate(-0.4deg);
+	border-color: rgba(168, 115, 255, 0.55);
+	box-shadow: 0 22px 44px rgba(103, 53, 167, 0.28);
+}
+
+/* Gengar: el ritmo más poderoso, con pulso y resplandor final. */
+.gengar-main-img {
+	animation: gengar-float 5.2s ease-in-out infinite;
+}
+
+.gengar-halo {
+	animation: gengar-glow 4.8s ease-in-out infinite;
+}
+
+.gengar-panel,
+.gengar-final-card {
+	transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease;
+}
+
+.gengar-panel:hover,
+.gengar-final-card:hover {
+	transform: translateY(-5px);
+	border-color: rgba(241, 139, 231, 0.58);
+	box-shadow: 0 22px 46px rgba(189, 62, 175, 0.28);
+}
+
+/* Las barras parten de cero cada vez que una pestaña vuelve a aparecer. */
+#gastly.section-active .stat-track span {
+	animation: stat-fill 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+#haunter.section-active .haunter-stat-track span {
+	animation: stat-fill 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+#gengar.section-active .gengar-stat-track span {
+	animation: stat-fill 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes section-fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes section-fade-out {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-8px);
+	}
+}
+
+@keyframes home-gengar-float {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-7px);
+	}
+}
+
+@keyframes gastly-float {
+	0%,
+	100% {
+		opacity: 0.88;
+		transform: translate3d(0, 2px, 0);
+	}
+	50% {
+		opacity: 1;
+		transform: translate3d(0, -7px, 0);
+	}
+}
+
+@keyframes gastly-mist {
+	0% {
+		opacity: 0.22;
+		transform: translate3d(-5px, 5px, 0) scale(0.96);
+	}
+	100% {
+		opacity: 0.5;
+		transform: translate3d(8px, -5px, 0) scale(1.06);
+	}
+}
+
+@keyframes haunter-float {
+	0%,
+	100% {
+		opacity: 0.82;
+		transform: translate3d(0, 2px, 0) rotate(0deg);
+	}
+	25% {
+		transform: translate3d(7px, -5px, 0) rotate(1deg);
+	}
+	65% {
+		opacity: 1;
+		transform: translate3d(-5px, -10px, 0) rotate(-1deg);
+	}
+}
+
+@keyframes gengar-float {
+	0%,
+	100% {
+		opacity: 0.92;
+		transform: translateY(2px) scale(1);
+	}
+	50% {
+		opacity: 1;
+		transform: translateY(-10px) scale(1.015);
+	}
+}
+
+@keyframes gengar-glow {
+	0%,
+	100% {
+		opacity: 0.65;
+		transform: scale(0.94);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.06);
+	}
+}
+
+@keyframes evolution-arrow {
+	0%,
+	100% {
+		opacity: 0.55;
+		transform: translateX(0);
+	}
+	50% {
+		opacity: 1;
+		transform: translateX(5px);
+	}
+}
+
+@keyframes stat-fill {
+	from {
+		width: 0;
+	}
+	to {
+		width: var(--stat, var(--haunter-stat, var(--gengar-stat)));
+	}
+}
+
+@media (max-width: 760px) {
+	#inicio .evolution-arrow {
+		animation-name: evolution-arrow-mobile;
+	}
+}
+
+@keyframes evolution-arrow-mobile {
+	0%,
+	100% {
+		opacity: 0.55;
+		transform: rotate(90deg) translateX(0);
+	}
+	50% {
+		opacity: 1;
+		transform: rotate(90deg) translateX(5px);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	.content-section.section-active {
+		opacity: 1;
+		transform: none;
+	}
+
+	.content-section.section-exit {
+		opacity: 0;
+		transform: none;
+	}
+}
