@@ -20,6 +20,10 @@ button {
 	cursor: pointer;
 }
 
+button.active {
+	font-weight: bold;
+}
+
 .content-section {
 	border-top: 1px solid #ccc;
 	margin-top: 1rem;
