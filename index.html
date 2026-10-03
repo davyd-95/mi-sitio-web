@@ -23,24 +23,85 @@
 	<main>
 		<!-- Cada sección representa una etapa de la página. -->
 		<section id="inicio" class="content-section" role="tabpanel" aria-labelledby="titulo-inicio">
-			<h2 id="titulo-inicio">Inicio</h2>
-			<p>Contenido de ejemplo para presentar la línea evolutiva de Gastly.</p>
+			<div class="home-layout">
+				<div class="home-hero">
+					<div class="hero-copy">
+						<p class="hero-eyebrow">Pokémon · Tipo Fantasma</p>
+						<h2 id="titulo-inicio">Línea Evolutiva Fantasma</h2>
+						<p class="hero-intro">Tres formas, una misma presencia espectral. Descubre el recorrido de Gastly hasta convertirse en el imponente Gengar.</p>
+						<div class="hero-facts" aria-label="Datos rápidos">
+							<span>Generación I</span>
+							<span>Tipo Fantasma / Veneno</span>
+						</div>
+					</div>
 
-			<div class="evolution-sequence">
-				<article class="evolution-card">
-					<img class="pokemon-img pokemon-card-img" src="img/gastly.png" alt="Gastly, primera etapa de la línea evolutiva" loading="lazy">
-					<h3>Gastly</h3>
-				</article>
+					<div class="hero-visual">
+						<span class="hero-orbit hero-orbit-one" aria-hidden="true"></span>
+						<span class="hero-orbit hero-orbit-two" aria-hidden="true"></span>
+						<img class="pokemon-img pokemon-main-img" src="img/gengar.png" alt="Gengar, forma final de la línea evolutiva fantasma" loading="lazy">
+					</div>
+				</div>
 
-				<article class="evolution-card">
-					<img class="pokemon-img pokemon-card-img" src="img/haunter.png" alt="Haunter, segunda etapa de la línea evolutiva" loading="lazy">
-					<h3>Haunter</h3>
-				</article>
+				<div class="section-heading">
+					<p class="section-kicker">La transformación</p>
+					<h3>Una evolución que se siente en la sombra</h3>
+				</div>
 
-				<article class="evolution-card">
-					<img class="pokemon-img pokemon-card-img" src="img/gengar.png" alt="Gengar, etapa final de la línea evolutiva" loading="lazy">
-					<h3>Gengar</h3>
-				</article>
+				<div class="evolution-sequence" aria-label="Secuencia evolutiva de Gastly a Gengar">
+					<article class="evolution-card">
+						<div class="card-image-wrap">
+							<img class="pokemon-img pokemon-card-img" src="img/gastly.png" alt="Gastly, primera etapa de la línea evolutiva" loading="lazy">
+						</div>
+						<p class="evolution-stage">01 · Inicial</p>
+						<h4>Gastly</h4>
+						<p>La niebla gaseosa que inicia el viaje.</p>
+					</article>
+
+					<div class="evolution-arrow" aria-hidden="true">→</div>
+
+					<article class="evolution-card">
+						<div class="card-image-wrap">
+							<img class="pokemon-img pokemon-card-img" src="img/haunter.png" alt="Haunter, segunda etapa de la línea evolutiva" loading="lazy">
+						</div>
+						<p class="evolution-stage">02 · Intermedia</p>
+						<h4>Haunter</h4>
+						<p>Una presencia traviesa entre dos mundos.</p>
+					</article>
+
+					<div class="evolution-arrow" aria-hidden="true">→</div>
+
+					<article class="evolution-card">
+						<div class="card-image-wrap">
+							<img class="pokemon-img pokemon-card-img" src="img/gengar.png" alt="Gengar, etapa final de la línea evolutiva" loading="lazy">
+						</div>
+						<p class="evolution-stage">03 · Final</p>
+						<h4>Gengar</h4>
+						<p>La sombra definitiva que acecha detrás.</p>
+					</article>
+				</div>
+
+				<div class="home-details">
+					<article class="info-panel">
+						<p class="section-kicker">Ficha de la línea</p>
+						<h3>Información general</h3>
+						<dl class="info-list">
+							<div><dt>Tipo principal</dt><dd>Fantasma</dd></div>
+							<div><dt>Tipo secundario</dt><dd>Veneno</dd></div>
+							<div><dt>Generación</dt><dd>Primera · Kanto</dd></div>
+							<div><dt>Recorrido</dt><dd>Gastly → Haunter → Gengar</dd></div>
+						</dl>
+					</article>
+
+					<article class="info-panel curiosity-panel">
+						<p class="section-kicker">Archivo espectral</p>
+						<h3>Curiosidades</h3>
+						<ul class="curiosity-list">
+							<li>Gastly está formado casi por completo de gas.</li>
+							<li>Haunter puede atravesar paredes y aparecer desde las sombras.</li>
+							<li>Gengar comparte categoría con Pokémon asociados a la sombra.</li>
+						</ul>
+					</article>
+				</div>
 			</div>
 		</section>
 
